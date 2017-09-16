@@ -1,0 +1,32 @@
+130306 11:57:56 Error in foreign key constraint of table moviegallery/#sql-16e4_146:
+FOREIGN KEY (`artistId`) REFERENCES `moviegallery`.`artist`(`artistId`) ON DELETE SET NULL ON UPDATE CASCADE:
+You have defined a SET NULL condition though some of the
+columns are defined as NOT NULL.
+
+ll` ADD FOREIGN KEY (`artistId`) REFERENCES `moviegallery`.`artist`(`artistId`) ON DELETE RESTRICT ON UPDATE RESTRICT
+Foreign key constraint fails for table `moviegallery`.`#sql-16e4_136`:
+,
+  CONSTRAINT `#sql-16e4_136_ibfk_1` FOREIGN KEY (`artistId`) REFERENCES `artist` (`artistId`)
+Trying to add in child table, in index `artistId` tuple:
+DATA TUPLE: 2 fields;
+ 0: len 4; hex 00000000; asc     ;;
+ 1: len 6; hex 00000000060b; asc       ;;
+
+But in parent table `moviegallery`.`artist`, in index `PRIMARY`,
+the closest match we can find is record:
+PHYSICAL RECORD: n_fields 8; compact format; info bits 0
+ 0: len 4; hex 00000001; asc     ;;
+ 1: len 6; hex 000000009843; asc      C;;
+ 2: len 7; hex b90000015b0110; asc     [  ;;
+ 3: len 30; hex 52616e6a616d202020202020202020202020202020202020202020202020; asc Ranjam                        ;;
+ 4: len 30; hex 616c65652020202020202020202020202020202020202020202020202020; asc alee                          ;;
+ 5: len 3; hex 8fba67; asc   g;;
+ 6: len 30; hex 617364662020202020202020202020202020202020202020202020202020; asc asdf                          ;;
+ 7: len 2; hex 6164; asc ad;;
+
+0202020; asc cartoon                       ; (total 50 bytes);
+ 7: len 4; hex 00000000; asc     ;;
+ 8: len 4; hex 80000000; asc     ;;
+ 9: len 4; hex 80000000; asc     ;;
+
+

@@ -1,0 +1,1 @@
+`moviegallery`.`#sql-16e4_158`, CONSTRAINT `#sql-16e4_158_ibfk_1` FOREIGN KEY (`movieCode`) REFERENCES `movie` (`movieCode`) ON DELETE CASCADE ON UPDATE CASCADE

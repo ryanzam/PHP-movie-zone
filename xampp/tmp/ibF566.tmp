@@ -1,0 +1,3 @@
+,
+  CONSTRAINT `roll_ibfk_3` FOREIGN KEY (`movieCode`) REFERENCES `movie` (`movieCode`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `roll_ibfk_4` FOREIGN KEY (`artistId`) REFERENCES `artist` (`artistId`) ON DELETE CASCADE ON UPDATE CASCADE
