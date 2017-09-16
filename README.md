@@ -4,5 +4,5 @@ This application is developed in PHP which allows registered users to add movie 
 
 # features
  - HTML, CSS (frontend)
- - PHPMyAdmin (for database)
+ - PHPMyAdmin (for managing database)
  - PHP (for backend)
